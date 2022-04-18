@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css">
+	<title>PHP CURSO ONLINE - FORMULÁRIOS</title>
+</head>
+<body>
+<div>
+	<h1>PHP - curso online</h1>
+	<h2>Formulários em PHP</h2>
+	<p>Está página tem como objetivo criar formulários HTML5/PHP</p>
+</div>
+<div>
+    <!-- O formulario ira utilizar o metodo de envio GET, que recebe/envia os dados pela URL e a acao sera chamar o arquivo dados.php e passar para ele esses dados.
+    SE VOCE OPTAR PELO METODO GET, NO PHP VOCE DEVERA USAR $v=$_GET["v"];
+    SE VOCE OPTAR PELO METODO POST, NO PHP VOCE DEVERA USAR $v=$_POST["v"]; -->
+    <h2>Manipulação do GET</h2>
+    <form method="get" action="dados.php">
+    Valor: <input type="number" name="v"/>
+    <input type="submit" value="Calcular Raiz"/>
+    </form>
+</div>
+<div>
+    <h2>Manipulação do Radio</h2>
+    <form method="get" action="dados2.php">
+        Nome: <input type="text" name="nome"/>
+        Nascimento: <input type="number" name="ano"><br/>
+        <!-- IMPORTANTE COLOCAR O MESMO NAME PARA QUE AMBOS OS BOTOES NAO SELECIONEM E TEM QUE COLOCAR O VALUE NAS OPÇOES PARA INFORMAR O RETORNO DESEJADO DE CADA INPUT SELECIONADO -->
+        <fieldset><legend>Sexo</legend>
+            <input type="radio" name="sexo" id="masc" value="homem" checked/>
+            <label for="masc">Masculino</label>
+            <input type="radio" name="sexo" id="fem" value="mulher"/>
+            <label for="fem">Feminino</label>
+        </fieldset><br/>
+        <input type="submit" value="Enviar"/>
+    </form>
+</div>
+<div>
+    <h2>Manipulação do CSS3</h2>
+    <form method="get" action="dados3.php">
+        <label for="itxt">Texto</label>
+        <input type="text" name="t" id="itxt"/><br/>
+        <label for="itam">Tamanho</label>
+        <select name="tam" id="itam">
+            <option value="8pt">8</option>
+            <option value="10pt">10</option>
+            <option value="12pt" selected>12</option>
+            <option value="14pt">14</option>
+            <option value="20pt">20</option>
+            <option value="40pt">40</option>
+        </select><br/>
+        <label for="icor">Cor:</label>
+        <input type="color" name="cor" id="icor"/><br/>
+        <input type="submit" value="Gerar"/>
+    </form>
+</div>
+<div>
+    <h2>Condicionais</h2>
+    <form method="get" action="exercicio09.php">
+        Ano de Nascimento:
+        <input type="number" placeholder="4 digitos" name="ano"/><br/>
+        <input type="submit" value="Verificar"/>
+    </form>
+</div>
+<div>
+    <h2>Condicionais Aninhados</h2>
+    <form method="get" action="exercicio091.php">   
+        Ano de Nascimento:
+        <input type="number" placeholder="4 digitos" name="ano"/><br/>
+        <input type="submit" value="Verificar"/>
+    </form>
+</div>
+<div>
+    <h2>Média Aritmética</h2>
+    <form method="get" action="exercicio092.php">
+    Nota 1: <input type="number" name="n1" min="0" max="10"/><br/>
+    Nota 2: <input type="number" name="n2" min="0" max="10"/><br/>
+    <input type="submit" value="Calcular Média"/>
+    </form>
+</div>
+<div>
+    <h2>Uso do Switch</h2>
+    <form method="get" action="exercicio10.php">
+    Número: <input type="number" name="num" min="0" max="1000"/><br/>
+    <label for="iopc">Opções: </label>
+        <select name="opc" id="iopc">
+            <option value="1" selected>Dobro</option>
+            <option value="2">Cubo</option>
+            <option value="3">Raiz²</option>
+        </select><br/>
+    <input type="submit" value="Calcular"/>
+    </form>
+</div>
+<div>
+    <h2>Uso do Switch Multiplo</h2>
+    <form method="get" action="exercicio11.php">
+        <fieldset><legend>Dia da Semana</legend>
+            <input type="radio" name="sem" id="seg" value="2" checked/>
+            <label for="seg">Segunda</label>
+            <input type="radio" name="sem" id="ter" value="3"/>
+            <label for="ter">Terça</label>
+            <input type="radio" name="sem" id="qua" value="4"/>
+            <label for="qua">Quarta</label>
+            <input type="radio" name="sem" id="qui" value="5"/>
+            <label for="qui">Quinta</label>
+            <input type="radio" name="sem" id="sex" value="6"/>
+            <label for="sex">Sexta</label>
+            <input type="radio" name="sem" id="sab" value="7"/>
+            <label for="sab">Sábado</label>
+            <input type="radio" name="sem" id="dom" value="8"/>
+            <label for="dom">Domingo</label>
+        </fieldset><br/>
+        <input type="submit" value="Verificar"/>
+    </form>
+</div>
+<div>
+    <h2>Uso do Switch Múltiplo 2</h2>
+    <form method="get" action="exercicio12.php">
+    <label for="iEst">Selecione um estado: </label>
+        <select name="opc" id="iEst">
+            <option value="N" selected>Acre</option>
+            <option value="NE">Alagoas</option>
+            <option value="N">Amapá</option>
+            <option value="N">Amazonas</option>
+            <option value="NE">Bahia</option>
+            <option value="NE">Ceará</option>
+            <option value="SE">Espírito Santo</option>
+            <option value="CO">Goiás</option>
+            <option value="NE">Maranhão</option>
+            <option value="CO">Mato Grosso</option>
+            <option value="CO">Mato Grosso do Sul</option>
+            <option value="SE">Minas Gerais</option>
+            <option value="N">Pará</option>
+            <option value="NE">Paraíba</option>
+            <option value="S">Paraná</option>
+            <option value="NE">Pernambuco</option>
+            <option value="NE">Piauí</option>
+            <option value="SE">Rio de Janeiro</option>
+            <option value="NE">Rio Grande do Norte</option>
+            <option value="S">Rio Grande do Sul</option>
+            <option value="N">Rondônia</option>
+            <option value="N">Roraima</option>
+            <option value="S">Santa Catarina</option>
+            <option value="SE">São Paulo</option>
+            <option value="NE">Sergipe</option>
+            <option value="N">Tocantins</option>
+            <option value="CO">Distrito Federal</option>
+        </select><br/>
+        <input type="submit" value="Analisar"/>
+    </form>
+</div>
+<div>
+    <!-- IMPORTANTE: USAR ESSA LOGICA PARA CRIAR UM ELEMENTO LISTA COM OPTIONS -->
+    <h2>Uso de loop e formularios dinamicos com JS no HTML5</h2>
+    <form method="get" action="exercicio13.php">
+        <label for="iMult">Selecione um número: </label>
+        <select name="nopc" id="iMult" size="1">
+        <!--    <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>-->
+        <script>
+            let sel = window.document.getElementById('iMult')
+            for(let c=1; c <=10; c++ ) {
+                //criar os elementos <options> do select
+                let item = document.createElement('option')
+                //joga no campo select o "texto"
+                item.text = c
+                //grava o campo "value" de cada item selecionado para uso futuro, caso queira referenciar os itens incluidos no select - uso em php por exemplo
+                item.value = c
+                //esse comando vai fazendo o append dentro do selection e mostra na tela
+                sel.appendChild(item)
+                //let valor = (item.value)
+                //mostra os valores do array
+                //res.innerHTML = valor[1]
+            }
+        </script> 
+        </select><br/>
+        <input type="submit" value="Enviar"/>
+    </form>	
+</div>
+<div>
+    <h2>Número Primo</h2>
+    <form method="get" action="exercicio14.php">
+        Número: <input type="number" name="np" min="1" /><br/>
+        <input type="submit" value="Calcular Primo"/>
+    </form>
+</div>
+<div>
+    <h2>Números Primos dado um número</h2>
+    <form method="get" action="exercicio141.php">
+        Número: <input type="number" name="nps" min="1" /><br/>
+        <input type="submit" value="Calcular Primos"/>
+    </form>
+</div>
+</body>
+</html>

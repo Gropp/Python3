@@ -1,0 +1,267 @@
+Conceitos de Programação em Python 
+(Desktop/Web/Mobile/IoT/Games)
+
+github - 3L1s1nh4!
+
+1982 - CWI - Holanda (linguagem ABC)
+Python - Do grupo de comedia ingles.
+A cobra é o mascote da linguagem
+
+CP4E - Computer Programer for anybody (psf)
+
+Python
+
+- Linguagem de proposito geral (web/local/games/S.O/RaspberryPi)
+- Fácil e intuitivo
+- Multiplataforma (windows/mac/linux/TVs/Celular)
+- Batteries include (vem com a maioria das libs)
+- Livre (codigo aberto)
+- Organizada (identada)
+- Orientada a objeto (in natura)
+
+Áreas de aplicacao (numeros grandes)
+
+- IA
+- BIOTECNOLOGIA
+- COMPUTACAO 3D
+
+python --version
+
+Python (no terminal chama o interpretador python nativo do linux)
+
+>>> print('Ola Mundo')
+
+>>> import this (mostra as regras zen do python)
+
+IDE Python
+
+exit()
+Crtl+D
+
+Mensagens (strings) tem como delimitador '' ou "" (as simples sao as mais usadas) 'Olá Mundo'
+
+Python 3.0 - todos os comandos sao fuções, entao tem que estar entre parenteses os argumentos
+
+Para mostrar uma mensagem:
+
+função print() - imprime na tela
+
+print('Olá Mundo')
+
+Números não são representados entre aspas.
+
+7 + 4
+
+Para mostrar o resultado do calculo:
+
+print(7+4) -> 11
+print('7'+'4') -> 74 (concatena)
+
+O python usa o + e a , para concatenar.
+A , se usa para concatenar types diferentes ('ola', 5)
+
+VARIAVEIS
+
+TODAS AS VARIAVEIS EM PYTHON SAO OBJETOS
+
+= RECEBE/ATRIBUI
+
+>>> nome = 'fernando'
+>>> idade = 48
+>>> peso = 120
+>>> print(nome, idade, peso)
+
+função input()
+pergunta o valor da variavel - interage com o usuario.
+
+
+>>> nome = input('Qual seu nome? ')
+Qual seu nome? fernando
+>>> idade = input('Qual sua idade? ')
+Qual sua idade? 48
+>>> peso = input('Qual seu peso? ')
+Qual seu peso? 120
+>>> print(nome, idade, peso)
+fernando 48 120
+
+para testar e criar os codigos em python, usamos o idle do linux (uma interface que possibilita digitar o comando direto e executar, ou entao criar arquivos com codigos)
+
+Tipos primitivos e saída de dados
+
+int() - inteiro
+float() - ponto flutuante
+bool() - boolean - True/False (usar sempre a primeira letra maiuscula)
+str() - texto/string
+
+Usando uma mascara dentro da funcao print, usando um metodo.
+
+print('texto {}'.format(variavel))
+
+Instalado o PyCharm no note64
+
+Operadores aritmeticos
+
++ adiçao
+- subtraçao
+* multiplicação
+** potencia
+// divisao inteira
+% resto da divisao (modulo)
+== igual (comparação)
+
+Ordem de precedencia
+
+1 - () - para expressoes matematicas só usamos parenteses
+2 - ** - potencias
+3 - * / // % - tem o mesmo peso
+4 - + - - tem o mesmo peso
+
+
+pow(4,3) - funcao de potencia
+
+raiz quadrada pode ser escrita como uma potencia de 1/2
+81**(1/2) == 9 (elevar 81 a meio, é equivalente a raiz quadrada de 81)
+27**(1/3) == 3 (elevar 27 a um terço, é equivalente a raiz cubica de 27)
+
+podemos multiplicar uma string
+
+print('=' * 20) - essa chamada vai imprimir na tela vinte vezes o sinal de =
+
+formatacao do print
+nome = input('Digite o seu nome: ')
+print('prazer em te conhecer {}!'.format(nome))
+
+
+Modulos em python
+
+
+bibliotecas
+
+palavra chave = import
+
+Importacao geral
+import bebidas #importa toda a biblioteca
+
+importacao seletiva
+from bebidas import strogonoff #importa somente o que interessa
+
+Exemplo biblioteca math #funcoes matematicas
+
+import math
+from math import ceil #arredonda para cima
+from math import floor #arredonda para baixo
+from math import trunc, pow #importa duas funçoes
+trunc #trunca
+pow #potencia
+sqrt #raiz quadrada
+factorial #fatorial
+
+no python org existem varias outras bibliotecas que podem ser importadas
+
+voce coloca a biblioteca de interesse no programa, ao aparecer a lampada vermelha do PyCharm voce escolhe a opçao de importar...
+
+Aula 09
+
+Como manipular cadeias de texto (caracteres) no python
+
+srting = 'curso em video Python'
+
+frase = 'curso em video Python'
+
+o python quarda os caracteres como se fosse um array - iniciando de ZERO
+
+CURSO EM VIDEO PYTHON
+012345678901234567890 0 - 21
+
+print(frase) = curso em video Python
+print(frase[7]) = m
+print(frase[16]) = y
+print(frase[9:14] = video #o array vai até o 13 (ele excluí o ultimo índice)
+print(frase[9:21:2] = imprime da posicao 9 a 20 de dois em dois
+print(frase[:5] = imprime do 0 ate o 4 - se vc omitir o inicio, ele comeca do ZERO
+print(frase[15:] = imprime da posicao 15 até o FINAL DA STRING
+print(frase[9::3] = imprime da posicao 9 até o FINAL PULANDO DE 3 em 3
+
+analise de strings
+
+len(frase) = comprimento da string
+
+Existem listas / tuplas e dicionarios (tipos de dados aninhados
+
+aula 10 condicoes no python
+
+condicoes simples, compostas e a simplificada
+
+if():
+else:
+
+print('carro novo' if tempo <=3 else 'carro velho')
+
+Como colocar cores no python
+
+Padrao ANSI
+
+escape sequence
+codigo ansi para cores:
+
+\033[m
+
+exemplo
+
+\033[stylo; cortexto; corbackground m
+
+\033[0;33;44m
+
+todos os parametros sao opcionais...
+
+stylo
+
+0 - sem estilo
+1 - bold
+4 - underline
+7 - inverte/negativo preto/branco
+
+cortexto
+CODIGO NA CASA DO 30:
+
+30 - BCO
+31 - VERMELHO
+32 - VERDE
+33 - AMARELO
+34 - AZUL
+35 - ROXO
+36 - CIANO
+37 - CINZA
+(verificar mais codigos na internet)
+
+corbackground
+É A MESMA ORDEM DAS CORES DE TEXTO COM OS CODIGOS NA CASA DO 40:
+40 41 42 43 44 45 46 47
+
+
+Condicoes Aninhadas
+
+tres opcoes de escolha
+carro.siga()
+se carro.esquerda()				if:
+	faça()
+senao se carro.direita()			elif:
+	faça()
+senao carro.siga()				else:
+carro.para()
+
+se tiver mais uma opçao, é só colocar um elif: para tratar essa situação.
+vc tem que ter um if (obrigatorio), um  ou nenhum else (opcional) e entre eles varios elif's!
+
+
+
+
+
+
+
+
+
+
+
+
+
